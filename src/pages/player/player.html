@@ -1,0 +1,88 @@
+<!--
+  Generated template for the Player page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>player</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content no-padding class="globalBackground">
+  <ion-row class="radioText">
+    <!-- <ion-col></ion-col> -->
+    <img src="assets/player/radio.png" /> &nbsp;Satyatma Radio
+
+  </ion-row>
+  <ion-row class="bgDark imageBannerRow">
+
+    <img src="assets/player/guruji.jpg" />
+  </ion-row>
+  <!-- <ion-row class="bgDark"> -->
+    <ion-range no-padding class="bgDark trackSeeker" min="currentTime" max="trackLength" [(ngModel)]="saturation" color="secondary">
+        <ion-label class="colorWhite" range-left>{{currentTime}}</ion-label>
+        <ion-label class="colorWhite" range-right>{{trackLength1}}</ion-label>
+    </ion-range>
+    <!-- <ion-range min="20" max="80"  [(ngModel)]="brightness">
+      <ion-label class="colorWhite" range-left>{{currentTime}}</ion-label>
+      <ion-label class="colorWhite" range-right>{{trackLength}}</ion-label>
+   </ion-range> -->
+  <!-- </ion-row> -->
+  <ion-row class="playerRow" no-padding>
+    <ion-col col-10 no-padding>
+      <button ion-button [disabled]="isFirstTrack || noTracks" color="dark" clear >
+        <ion-icon name="rewind" (click)="playPrevious()" class="supportIcon"></ion-icon>
+      </button>
+    </ion-col>
+    <ion-col col-30 no-padding>
+      <!-- [disabled]="disablePlay" -->
+      <button ion-button color="dark" clear [disabled]="noTracks" *ngIf="isPlaying=='paused'">
+        <ion-icon name="play" (click)="play()"  class="playIcon"  ></ion-icon>
+      </button>
+      <button ion-button color="dark" clear [disabled]="noTracks" *ngIf="isPlaying=='playing'">
+        <ion-icon name="pause" (click)="pause()" class="playIcon" ></ion-icon>
+      </button>
+      <!-- <ion-icon name="close"  class="playIcon" [disabled]="noTracks" *ngIf="isPlaying=='stopped'"></ion-icon> -->
+      <button ion-button color="dark" [disabled]="noTracks" clear *ngIf="isPlaying=='downloading'">
+        <!-- <ion-icon name="download" class="playIcon"></ion-icon> -->
+        <img src="assets/icon/spinnerYellow.gif" class="downloadingGif"/>
+      </button>
+      <!-- <ion-icon name="play" class="playIcon" ></ion-icon>  -->
+
+    </ion-col>
+    <ion-col col-10 no-padding>
+      <button ion-button [disabled]="isLastTrack || noTracks" color="dark" clear >
+        <ion-icon name="fastforward" (click)="playNext()" class="supportIcon"></ion-icon>
+      </button>
+    </ion-col>
+
+  </ion-row>
+
+
+  <ion-row>
+    <button ion-button [disabled]="noTracks" color="dark" clear >
+      <ion-icon name="trash"(click)="clearPlaylist()" class="supportIcon" align="right"></ion-icon>
+      <span class="clearOption"> Clear</span>
+    </button>
+    <!-- <ion-icon name="stop"  class="playIcon" ></ion-icon>
+    <ion-icon name="close"  class="playIcon" ></ion-icon> -->
+  </ion-row>
+
+
+  <ion-list>
+    <span class="playListLbl">Play List</span>
+    <!-- <ion-list-header>
+      <ion-item-divider color="light" class="alignCenter"> Play List </ion-item-divider>
+    </ion-list-header> -->
+    <ion-item *ngFor="let oneTrack of playlist; let i=index;" (click)="playAudio(oneTrack,i)" [ngClass]="{currentTrack:currentIndex==i}" >
+      {{playlist[i].name}}
+      <img src="assets/icon/musicPlaying.gif" item-right class="width10" *ngIf="currentIndex==i"/>
+    </ion-item>
+    <ion-item *ngIf="!playlist || playlist.length==0"> No Tracks. Please select from Albums/Stotras</ion-item>
+  </ion-list>
+</ion-content>

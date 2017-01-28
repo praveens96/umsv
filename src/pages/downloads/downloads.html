@@ -1,0 +1,22 @@
+<!--
+  Generated template for the Downloads page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>downloads</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="globalBackground">
+  <ion-list>
+    <ion-item *ngFor="let oneTrack of downloadedTracks;let i=index; let e=even" (click)="playTrack(oneTrack)">
+      <h3>{{oneTrack.name}}</h3>
+    </ion-item>
+  </ion-list>
+</ion-content>

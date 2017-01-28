@@ -1,0 +1,19 @@
+<!-- <ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header> -->
+
+<ion-content padding>
+
+  <!-- <button (click)="play()">play</button> -->
+  <ion-tabs #umrtabs class="tabBGC">
+    <ion-tab  [root]="albumsRoot" tabIcon="globe" tabTitle="Radio">Albums</ion-tab>
+    <ion-tab [root]="playerRoot" tabIcon="musical-notes" tabTitle="Player">Player</ion-tab>
+    <ion-tab [root]="downloadsRoot" tabIcon="albums" tabTitle="My Stotras">Downloads</ion-tab>
+
+  </ion-tabs>
+
+</ion-content>

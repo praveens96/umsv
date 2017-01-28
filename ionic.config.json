@@ -1,0 +1,12 @@
+{
+  "name": "umsatyatmavani",
+  "app_id": "6c21d10e",
+  "v2": true,
+  "typescript": true,
+  "proxies": [
+    {
+      "path": "/getalbums",
+      "proxyUrl": "https://mobilitystorageacc.blob.core.windows.net/empselfies/sample.json"
+    }
+  ]
+}

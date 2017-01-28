@@ -1,0 +1,81 @@
+page-player {
+
+}
+.playIcon{
+  font-size: 3rem;
+  color: white;
+}
+.supportIcon{
+  font-size: 2rem;
+  color: white;
+}
+.playerRow{
+  text-align: center;
+  align-items: center;
+  background-color: black;
+}
+.clearOption{
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  margin-left: 2px;
+}
+.alignCenter{
+  text-align: center;
+}
+.downloadingGif{
+  width: 50%;
+}
+.currentTrack{
+  background-color: #eff0f1;
+}
+.width10{
+  width: 7%;
+}
+.colorWhite{
+  color: white;
+}
+.bgDark{
+  background-color: black;
+}
+.imageBannerRow{
+  justify-content: center;
+  padding: 1rem;
+}
+.imageBannerRow img{
+  width: 28%;
+  height: 30%;
+}
+.scroll-content{
+  padding: 0 !important;
+}
+.trackSeeker .button-ios{
+  height: 1.8em;
+}
+.trackSeeker .range-knob{
+  top:14px;
+  height: 14px;
+  width: 14px;
+}
+.playerRow button{
+  height: 1.8em;
+}
+.trackSeeker .range-slider{
+  height: 3rem;
+}
+.radioText{
+  color: #b46933;
+    font-size: 2.4rem;
+    background-color: #fdce65;
+    font-weight: bold;
+}
+.radioText img{
+  width: 8%;
+  height: 6%;
+  margin-left: 1rem;
+}
+.playListLbl{
+  font-size:1.5rem;
+  color:gray;
+  margin-bottom:1rem;
+}
