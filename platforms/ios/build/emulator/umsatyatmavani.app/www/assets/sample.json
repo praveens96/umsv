@@ -1,0 +1,33 @@
+{
+	"Albums": [{
+		"name": "UM 1",
+		"tracks": [{
+			"name": "a",
+			"type": "audio",
+			"format": "mp3",
+			"length": "13.54",
+			"remoteUrl": "https://mobilitystorageacc.blob.core.windows.net/empselfies/2.mp3"
+		}, {
+			"name": "xvc",
+			"type": "audio",
+			"format": "mp3",
+			"length": "321.54",
+			"remoteUrl": "https://mobilitystorageacc.blob.core.windows.net/empselfies/2.mp3"
+		}]
+	}, {
+		"name": "UM 2",
+		"tracks": [{
+			"name": "a2",
+			"type": "audio",
+			"format": "mp3",
+			"length": "12.54",
+			"remoteUrl": "https://mobilitystorageacc.blob.core.windows.net/empselfies/2.mp3"
+		}, {
+			"name": "ef",
+			"type": "audio",
+			"format": "mp3",
+			"length": "1.54",
+			"remoteUrl": "https://mobilitystorageacc.blob.core.windows.net/empselfies/2.mp3"
+		}]
+	}]
+}
